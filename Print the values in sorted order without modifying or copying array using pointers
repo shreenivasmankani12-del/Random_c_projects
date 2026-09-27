@@ -1,0 +1,61 @@
+#include <stdio.h>
+void print_sort(int* ptr, int size)
+{
+    printf("After sorting ");
+    int i,j,small,smallest,small1;
+    smallest=*(ptr);
+    for(i=0;i<size;i++)
+    {
+        if(*(ptr+i)<smallest)
+        {
+            smallest=*(ptr+i);
+        }
+    }
+    printf("%d ",smallest);
+    small=*(ptr);
+    for(i=0;i<size-1;i++)
+    {
+        for(j=0;j<size;j++)
+        {
+            if((*(ptr+j)<small)&&(*(ptr+j)>smallest))
+            {
+                small=*(ptr+j);
+            }
+        }
+        smallest=small;
+        printf("%d ",small);
+        small1=*(ptr);
+        for(j=0;j<size;j++)
+        {
+            if((*(ptr+j)<small1)&&(*(ptr+j)>small))
+            {
+                small1=*(ptr+j);
+            }
+        }
+        small=small1;
+    }
+}
+
+int main()
+{
+    int size, iter;
+    int* ptr;
+    
+    scanf("%d", &size);
+    
+    int arr[size];
+    
+    for (iter = 0; iter < size; iter++)
+    {
+        scanf("%d", &arr[iter]);
+    }
+    ptr=arr;
+    
+    print_sort(ptr, size);
+    printf("\n");
+    printf("Original array values ");
+    for (iter = 0; iter < size; iter++)
+    {
+        printf("%d ",arr[iter]);
+    }
+}
