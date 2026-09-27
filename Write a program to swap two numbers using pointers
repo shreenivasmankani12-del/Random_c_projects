@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n1,n2;
+    scanf("%d %d",&n1,&n2);
+    printf("Before swap :\n");
+    printf("num1 is %d",n1);
+    printf("\nnum2 is %d\n",n2);
+    int* ptr1= &n1;
+    int* ptr2= &n2;
+    int temp = *ptr1;
+    *ptr1=*ptr2;
+    *ptr2=temp;
+    printf("After swap :");
+    printf("\nnum1 is %d",n1);
+    printf("\nnum2 is %d",n2);
+}
