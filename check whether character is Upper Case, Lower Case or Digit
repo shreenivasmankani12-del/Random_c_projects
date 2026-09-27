@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main()
+{
+    char character;
+    scanf("%c", &character);
+    if (isalpha(character))
+    {
+        if (isupper(character))
+        {
+            printf("The character is Upper case");
+        }
+        else 
+        {
+            printf("The character is Lower case");
+        }
+    }
+    
+    else if (isdigit(character))
+    {
+        printf("The character is Digit");
+    }
+    else 
+    {
+        printf("The character not an alphabet or digit");
+    }
+}
