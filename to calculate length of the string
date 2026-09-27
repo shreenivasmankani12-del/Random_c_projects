@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    char str[100];
+    int i,count=0;
+    fgets(str,100,stdin);
+    for(i=0;str[i]!='\n';i++)
+    {
+        count++;
+    }
+    printf("String length is %d",count);
+}
