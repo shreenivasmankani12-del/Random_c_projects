@@ -1,0 +1,15 @@
+#include<stdio.h>
+int su(int n1,int n2)
+{
+    int su=0;
+    su = (n1+n2);
+    return su;
+}
+int main()
+{
+    int n1,n2,s;
+    scanf("%d %d", &n1,&n2);
+    s=0;
+    s=su(n1,n2);
+    printf("Sum of two number is %d", s);
+}
