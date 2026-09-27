@@ -1,0 +1,57 @@
+#include <stdio.h>
+int is_prime(int num)
+{
+    int i,flag = 0;
+    for(i=2;i<=(num/2);i++)
+    {
+        if(num%i==0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        //prime
+        return 1;
+    }
+    else
+    {
+        //not prime
+        return 0;
+    }
+}
+
+void generate_prime(int limit)
+{
+    int i;
+    for(i=2;i<=limit;i++)
+    {
+        if(is_prime(i)==1)
+        {
+            printf("%d ",i);
+        }
+        else
+        {
+            continue;
+        }
+    }
+}
+
+int main()
+{
+    int limit;
+    
+    scanf("%d", &limit);
+    
+    if (limit > 1)
+    {
+        generate_prime(limit);
+    }
+    else
+    {
+        printf("Invalid input\n");
+    }
+    
+    return 0;
+}
