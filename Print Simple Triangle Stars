@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int lines,count;
+    count=1;
+    scanf("%d", &lines);
+    while (lines>0)
+    {
+        while(count<=lines)
+        {
+            printf("* ");
+            count+=1;
+        }
+        lines-=1;
+    }
+}
