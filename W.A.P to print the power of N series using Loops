@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,base,expo;
+    scanf("%d %d", &base,&expo);
+    j=1;
+    for(i=0;i<=expo;i++)
+    {
+        printf("%d ", j);
+        j=j*base;
+    }
+}
