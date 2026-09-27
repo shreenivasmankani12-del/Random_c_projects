@@ -1,0 +1,48 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,c,n,size1,size2;
+    c=0;
+    scanf("%d", &size1);
+    scanf("%d", &size2);
+    int arr1[size1],arr2[size2];
+    if(size1==size2)
+    {
+        for(i=0;i<size1;i++)
+        {
+            scanf("%d", &arr1[i]);
+        }
+        for(i=0;i<size2;i++)
+        {
+            scanf("%d", &arr2[i]);
+        }
+        for(i=0;i<size1;i++)
+        {
+            n=1;
+            for(j=0;j<=size1;j++)
+            {
+                if(arr1[i]==arr2[j])
+                {
+                    n=0;
+                }
+            }
+            if(n==0)
+            {
+                c=0;
+            }
+
+        }
+        if(c==1)
+        {
+            printf("Array elements are not equal");
+        }
+        else
+        {
+            printf("Array elements are equal");
+        }
+    }
+    else
+    {
+        printf("Array elements are not equal");
+    }
+}
