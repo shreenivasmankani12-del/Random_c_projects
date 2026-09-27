@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    int* ptr=&num;
+    int square = (*ptr)*(*ptr);
+    int cube = square*(*ptr);
+    printf("Square is %d",square);
+    printf("\n Cube is %d",cube);
+}
