@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    scanf("%d",&i);
+    int* ptr=&i;
+    printf("Value is %d",*ptr);
+}
