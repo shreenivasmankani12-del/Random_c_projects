@@ -1,0 +1,27 @@
+#include<stdio.h>
+int find(char* ptr,char findchar)
+{
+    int i;
+    for(i=0;i<100;i++)
+    {
+        if(*(ptr+i)==findchar)
+        {
+            return i;
+            break;
+        }
+    }
+    printf("Character is not found in the string");
+}
+int main()
+{
+    char str[100];
+    fgets(str,100,stdin);
+    char findchar;
+    scanf("%c",&findchar);
+    char* ptr = str;
+    int m = find(ptr,findchar);
+    for(int i=m;i<100;i++)
+    {
+        printf("%c",str[i]);
+    }
+}
