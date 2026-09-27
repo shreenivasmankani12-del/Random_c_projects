@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    scanf("%d %d",&a,&b);
+    int*ptr1=&a;
+    int*ptr2=&b;
+    int sum = (*ptr1)+(*ptr2);
+    int product = (*ptr1)*(*ptr2);
+    printf("sum = %d",sum);
+    printf(" product = %d",product);
+}
