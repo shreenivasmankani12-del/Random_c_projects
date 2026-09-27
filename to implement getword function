@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int getword(char str[])
+{
+    int i;
+    char* temp;
+    for(i=0;i<100;i++)
+    {
+        if(str[i]==' ')
+        {
+            str[i]='\0';
+            return i;
+        }
+        else if(str[i]=='\0')
+        {
+            return i;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    
+}
+
+int main()
+{
+        int len = 0;
+	    char str[100];
+		scanf(" %[^\n]", str);
+
+		len = getword(str);
+
+        printf("You entered %s and the length is %d\n", str, len);
+}
