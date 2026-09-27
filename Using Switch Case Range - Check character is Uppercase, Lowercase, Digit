@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    char character;
+    scanf("%c", &character);
+    switch(character)
+    {
+        case 'a'...'z':
+        printf("Character is Lowercase");
+        break;
+        
+        case 'A'...'Z':
+        printf("Character is Uppercase");
+        break;
+    
+        case '0'...'9':
+        printf("Character is a digit");
+        break;
+        
+        default:
+        printf("Not an alphabet or digit");
+        break;
+    }
+    
+}
