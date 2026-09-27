@@ -1,0 +1,16 @@
+#include<stdio.h>
+int product(int n1,int n2)
+{
+    int i,prod=0;
+    for(i=0;i<n2;i++)
+    {
+        prod+=n1;
+    }
+    printf("Product of two numbers is %d",prod);
+}
+int main()
+{
+    int n1,n2;
+    scanf("%d %d", &n1,&n2);
+    product(n1,n2);
+}
