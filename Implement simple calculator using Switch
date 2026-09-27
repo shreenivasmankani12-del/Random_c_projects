@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main()
+{
+    int n1,n2,result;
+    char operator;
+    scanf("%d %c %d", &n1, &operator,&n2);
+    int f=0;
+    switch(operator)
+    {   case'+':
+        result=n1+n2;
+        f=1;
+        break;
+        
+        case'-':
+        result=n1-n2;
+        f=1;
+        break;
+        
+        case'*':
+        result=n1*n2;
+        f=1;
+        break;
+        
+        case'/':
+        result=n1/n2;
+        f=1;
+        break;
+        
+        default:
+        printf("Invalid operation!" );
+        break;
+    }
+    if(f==1)
+    {
+        printf("%d",result);
+    }
+}
