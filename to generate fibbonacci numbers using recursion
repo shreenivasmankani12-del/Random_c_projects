@@ -1,0 +1,38 @@
+#include<stdio.h>
+int fibonacci(int num)
+{
+    if(num==0)
+    {
+        return 0;
+    }
+    else if(num==1)
+    {
+        return 1;
+    }
+    else
+    {
+        return (fibonacci(num-1)+fibonacci(num-2));
+    }
+}
+
+int main()
+{
+    int num,i,ret=0;
+    scanf("%d",&num);
+    if(num<0)
+    {
+        printf("Invalid input");
+    }
+    else
+    {
+    for(i=1;ret<=num;i++)
+    {
+        printf("%d ",ret);
+        ret = fibonacci(i);
+        if(ret ==0)
+        {
+            break;
+        }
+    }
+    }
+}
