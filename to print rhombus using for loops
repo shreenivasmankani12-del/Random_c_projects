@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+   int lines,i,j;
+   scanf("%d", &lines);
+   for(i=0;i<((2*lines)-1);i++)
+   {
+       for(j=0;j<=i;j++)
+       {
+          if(j>(lines-1) && j<lines+1)
+          {
+              printf("*");
+          }
+          else
+          {
+              printf(" ");
+          }
+       }
+       printf("\n");
+   }
+}
