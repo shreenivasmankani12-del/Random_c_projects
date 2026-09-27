@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+int main() {
+    int A, R, N;
+
+    if (scanf("%d", &A) != 1 || A <= 0) {
+        printf("Invalid input\n");
+        return 1;
+    }
+    
+    if (scanf("%d", &R) != 1 || R <= 0) {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    if (scanf("%d", &N) != 1 || N < 1) {
+        printf("Invalid input\n");
+        return 1;
+    }
+
+    printf("AP = ");
+    int ap_term = A;
+    for (int i = 0; i < N; i++) {
+        printf("%d", ap_term);
+        if (i < N - 1) {
+            printf(", ");
+        }
+        ap_term += R;
+    }
+    printf("\n");
+
+    printf("GP = ");
+    long long gp_term = A;
+    for (int i = 0; i < N; i++) {
+        printf("%lld", gp_term);
+        if (i < N - 1) {
+            printf(", ");
+        }
+        gp_term *= R;
+    }
+    printf("\n");
+
+    printf("HP = ");
+    int hp_ap_term = A;
+    for (int i = 0; i < N; i++) {
+        printf("%f", 1.0 / hp_ap_term);
+        if (i < N - 1) {
+            printf(", ");
+        }
+        hp_ap_term += R;
+    }
+    printf("\n");
+
+    return 0;
+}
