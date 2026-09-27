@@ -1,0 +1,69 @@
+#include<stdio.h>
+int main()
+{
+    int n,firstday,day,sum;
+    scanf("%d %d", &n,&firstday);
+    if((n>0 && n<365) && (firstday>0 && firstday<=7))
+    {
+        sum=n+firstday;
+        day=(sum%7)-1;
+        switch(day)
+        {
+            case 1:
+            {
+                printf("The day is sunday");
+                break;
+            }
+            case 2:
+            {
+                printf("The day is monday");
+                break;
+            } 
+            case 3:
+            {
+                printf("The day is tuesday");
+                break;
+            }
+            case 4:
+            {
+                printf("The day is wednesday");
+                break;
+            }
+            case 5:
+            {
+                printf("The day is thursday");
+                break;
+            }
+            case 6:
+            {
+                printf("The day is friday");
+                break;
+            }
+            case 7:
+            {
+                printf("The day is saturday");
+                break;
+            }
+            case 0:
+            {
+                printf("The day is saturday");
+                break;
+            }
+            default:
+            {
+                printf("Invalid input, first day should be >0 and <=7");
+            }
+        }
+    }   
+    else
+    {
+        if(n<=0||n>365)
+        {
+            printf("Error: Invalid Input, n value should be > 0 and <= 365");
+        }
+        else
+        {
+            printf("Error: Invalid input, first day should be > 0 and <= 7");
+        }
+    }
+}
