@@ -1,0 +1,21 @@
+#include<stdio.h>
+void square(int*ptr,int size)
+{
+    int i;
+    for(i=0;i<size;i++)
+    {
+        printf("%d ",(*(ptr+i))*(*(ptr+i)));
+    }
+}
+int main()
+{
+    int size,i;
+    scanf("%d",&size);
+    int arr[size];
+    for(i=0;i<size;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int*ptr=arr;
+    square(ptr,size);
+}
