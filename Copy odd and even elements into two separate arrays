@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,h;
+    int size;
+    scanf("%d", &size);
+    int arr[size],even[size],odd[size];
+    for(i=0;i<size;i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            even[j]=arr[i];
+            j+=1;
+        }
+        else
+        {
+            odd[h]=arr[i];
+            h+=1;
+        }
+    }
+    printf("Odd array elements: ");
+    for(i=0;i<h;i++)
+    {
+        printf("%d ",odd[i]);
+    }
+    printf("\n");
+    printf("Even array elements: ");
+    for(i=0;i<j;i++)
+    {
+        printf("%d ", even[i]);
+    }
+}
