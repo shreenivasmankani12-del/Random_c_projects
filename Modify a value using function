@@ -1,0 +1,12 @@
+#include<stdio.h>
+int modify(int num)
+{
+    num+=5;
+    printf("After modifying, num is %d",num);
+}
+int main()
+{
+    int num;
+    scanf("%d",&num);
+    modify(num);
+}
