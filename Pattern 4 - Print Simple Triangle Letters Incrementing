@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+    int chnum,lines,i,j;
+    char ch='A';
+    scanf("%d", &lines);
+    for(i=1;i<=lines;i++)
+    {
+        for(j=1;j<=i;j++)
+        {
+            printf("%c ",ch);
+            ch++;
+        }
+        printf("\n");
+    }
+}
