@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+    float principal, rate, Time, interest;
+    scanf("%f %f %f", &principal , &rate, &Time);
+    interest=(principal*rate*Time)/100;
+    printf("%g", interest);
+}
