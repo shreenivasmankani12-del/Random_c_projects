@@ -1,0 +1,59 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,c,n,size1,size2;
+    float median1,median2;
+    scanf("%d %d", &size1,&size2);
+    int arr1[size1],arr2[size2];
+    for(i=0;i<size1;i++)
+    {
+        scanf("%d",&arr1[i]);
+    }
+    for(i=0;i<size2;i++)
+    {
+        scanf("%d",&arr2[i]);
+    }
+    for(i=0;i<size1-1;i++)
+    {
+        for(i=0;i<size1-i-1;i++)
+        {
+            if(arr1[j]>arr1[j+1])
+            {
+                c=arr1[j];
+                arr1[j]=arr1[j+1];
+                arr1[j+1]=c;
+            }
+        }
+    }
+    for(i=0;i<size2-1;i++)
+    {
+        for(i=0;i<size2-i-1;i++)
+        {
+            if(arr2[j]>arr2[j+1])
+            {
+                c=arr2[j];
+                arr2[j]=arr2[j+1];
+                arr2[j+1]=c;
+            }
+        }
+    }
+    if(size1%2==0)
+    {
+        median1=0.5*(arr1[size1/2]+arr1[size1/2+1]);
+    }
+    else
+    {
+        median1=0.5*(arr1[(size1+1)/2]);
+    }
+    if(size2%2==0)
+    {
+        median2=0.5*(arr2[size1/2]+arr2[size1/2+1]);
+    }
+    else
+    {
+        median2=0.5*(arr2[(size2+1)/2]);
+    }
+    printf("Median of array1 :%g\n",median1);
+    printf("Median of array2 :%g\n",median2);
+    printf("Median of arrays :%g",((median1+median2)/2));
+}
