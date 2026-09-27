@@ -1,0 +1,27 @@
+#include <stdio.h>
+int my_isalnum(int ch)
+{
+    int i=ch;
+    if((i>47 && i<58)||(i>64 && i<91)||(i>96 && i<123))
+    {
+        printf("Entered character is alphanumeric character",ch);
+    }
+    else
+    {
+        printf("Entered character is not alphanumeric character",ch);
+    }
+}
+
+int main()
+{
+    char ch;
+    int ret;
+    
+    printf("Enter the character:\n");
+    scanf("%c", &ch);
+    
+    ret = my_isalnum(ch);
+    /*
+        Based on return value, print whether ch is alphanumeric or not
+    */
+}
