@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,size;
+    float sum,avg;
+    scanf("%d", &size);
+    int ele[size];
+    for(i=0;i<size;i++)
+    {
+        scanf("%d", &ele[i]);
+    }
+    for(i=0;i<size;i++)
+    {
+        sum+=ele[i];
+        avg=sum/(size);
+    }
+    printf(" Sum: %g\n",sum);
+    printf("Average: %f\n",avg);
+}
