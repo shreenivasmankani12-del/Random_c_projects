@@ -1,0 +1,30 @@
+#include <stdio.h>
+int is_xdigit(char ch)
+{
+    int i=ch;
+    if((i>47 && i<58)||(i>64 && i<72)||(i>96 && i<104))
+    {
+        printf("Entered character is an hexadecimal digit");
+    }
+    else
+    {
+        printf("Entered character is not an hexadecimal digit");
+    }
+}
+
+int main()
+{
+    char ch;
+    short ret;
+    
+    printf("Enter a character: ");
+    scanf("%c", &ch);
+    
+    ret = is_xdigit(ch);
+    
+    /* Based on the return value of the function print the message */
+    
+    
+    return 0;
+}
+
