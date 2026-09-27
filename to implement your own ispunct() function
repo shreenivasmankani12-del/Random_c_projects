@@ -1,0 +1,28 @@
+#include <stdio.h>
+int my_ispunct(char ch)
+{
+    int i=ch;
+    if((i==32)||(i>47&&i<58)||(i>64&&i<91)||(i>96&&i<123))
+    {
+        printf("Entered character is not punctuation character");
+    }
+    else
+    {
+        printf("Entered character is punctuation character");
+    }
+    
+}
+
+int main()
+{
+    char ch;
+    int ret;
+    
+    printf("Enter the character:");
+    scanf("%c", &ch);
+    
+    ret = my_ispunct(ch);
+    /*
+        Based on return value, print whether ch is lower case alphabet or not
+    */
+}
