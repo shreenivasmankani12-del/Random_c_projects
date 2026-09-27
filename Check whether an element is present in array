@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,size,search_element,flag=0;
+    scanf("%d", &size);
+    int arr[size];
+    for(i=0;i<size;i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    scanf("%d", &search_element);
+    for(i=0;i<size;i++)
+    {
+        if(search_element==arr[i])
+        {
+            printf("Element Found");
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("Not Found");
+    }
+}
