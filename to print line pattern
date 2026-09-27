@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    int m,n,place;
+    scanf("%d %d", &m,&n);
+    place=1;
+    while (place<=m)
+    {
+        if (place<=n || place>(m-n))
+        {
+            printf("$");
+        }
+        else
+        {
+            printf("*");
+        }
+        place+=1;
+    }
+}
