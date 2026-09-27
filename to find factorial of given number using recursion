@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    static int num;
+    scanf("%d",&num);
+    if(num<0)
+    {
+        printf("Invalid input");
+        return 0;
+    }
+    static unsigned long long int fact = 1;
+    if(num==0)
+    {
+        printf("Factorial of the given number is %lld",fact); 
+        return 0;
+    }
+    fact = fact*num;
+    num--;
+    main();
+}
