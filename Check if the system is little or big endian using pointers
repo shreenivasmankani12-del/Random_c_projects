@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int n=0x12345678;
+    char* ch=(char*)&n;
+    if("ch==0x78")
+    {
+        printf("Ours is a little endian");
+    }
+    else
+    {
+        printf("It is big endian system");
+    }
+}
