@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct student
+{
+    int id;
+    char name[20];
+    char address[100];
+};
+int main()
+{
+    struct student shreenivas;
+    scanf("%d",&shreenivas.id);
+    scanf("%s",shreenivas.name);
+    scanf("%s",shreenivas.address);
+
+    printf("%d\n%s\n%s\n",shreenivas.id,shreenivas.name,shreenivas.address);
+}
