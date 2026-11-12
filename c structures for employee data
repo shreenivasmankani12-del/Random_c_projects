@@ -1,0 +1,29 @@
+#include<stdio.h>
+struct employees
+{
+    int empid;
+    char empname[20];
+    int salary;
+};
+int main()
+{
+struct employees emp1;
+struct employees emp2;
+printf("enter salary 1\n");
+scanf("%d",&emp1.empid);
+printf("enter salary 2\n");
+scanf("%d",&emp2.empid);
+printf("enter name 1\n");
+scanf("%s",emp1.empname);
+printf("enter name 2\n");
+scanf("%s",emp2.empname);
+printf("enter salary 1\n");
+scanf("%d",&emp1.salary);
+printf("enter salary 2\n");
+scanf("%d",&emp2.salary);
+
+printf("employee 1\n");
+printf("%d %s %d\n",emp1.empid,emp1.empname,emp1.salary);
+printf("employee 2\n");
+printf("%d %s %d",emp2.empid,emp2.empname,emp2.salary);
+}
