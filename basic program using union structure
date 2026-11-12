@@ -1,0 +1,16 @@
+#include<stdio.h>
+union tester 
+{
+    char alpha;
+    int num;
+    double smtg;
+};
+int main()
+{
+    union tester temp;
+    printf("size is %u\n",sizeof(union tester));
+    temp.num = 65;
+    temp.smtg = 14.23314;
+    printf("%d\n%d\n%c",temp.smtg,temp.num,temp.alpha);
+    
+}
